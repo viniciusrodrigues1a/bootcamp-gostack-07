@@ -22,7 +22,7 @@ module.exports = {
   },
   plugins: [
     'react',
-    'prettier'
+    'prettier',
   ],
   rules: {
     'prettier/prettier': 'error',
@@ -31,6 +31,12 @@ module.exports = {
       { extensions: ['.jsx', '.js'] }
     ],
     'import/prefer-default-export': 'off',
-    'react/state-in-constructor': 'off'
+    'react/state-in-constructor': 'off',
+    "sort-imports": ["error", {
+      "ignoreCase": false,
+      "ignoreDeclarationSort": true,
+      "ignoreMemberSort": false,
+      "memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
+    }]
   },
 };
