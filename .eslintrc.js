@@ -37,6 +37,7 @@ module.exports = {
       "ignoreDeclarationSort": true,
       "ignoreMemberSort": false,
       "memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
-    }]
+    }],
+    "no-console": ["error", { allow: ["tron"] }]
   },
 };
