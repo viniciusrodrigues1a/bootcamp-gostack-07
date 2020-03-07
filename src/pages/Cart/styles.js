@@ -69,6 +69,14 @@ export const ProductTable = styled.table`
       color: #666;
       padding: 6px;
       width: 50px;
+      -moz-appearance: textfield;
+      text-align: center;
+
+      &::-webkit-inner-spin-button,
+      &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
     }
   }
 
