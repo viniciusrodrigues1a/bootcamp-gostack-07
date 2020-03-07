@@ -38,6 +38,7 @@ module.exports = {
       "ignoreMemberSort": false,
       "memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
     }],
-    "no-console": ["error", { allow: ["tron"] }]
+    "no-console": ["error", { allow: ["tron"] }],
+    "no-param-reassign": "off"
   },
 };
