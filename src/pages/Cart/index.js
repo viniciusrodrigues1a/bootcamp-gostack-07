@@ -6,6 +6,7 @@ import {
   MdDelete,
   MdRemoveCircleOutline,
 } from 'react-icons/md';
+import PropTypes from 'prop-types';
 
 import formatPrice from '../../utils/format';
 
@@ -82,6 +83,18 @@ function Cart({ cart, total, removeFromCart, updateAmountRequest }) {
     </Container>
   );
 }
+
+Cart.propTypes = {
+  cart: PropTypes.instanceOf(Array),
+  total: PropTypes.string,
+  removeFromCart: PropTypes.func.isRequired,
+  updateAmountRequest: PropTypes.func.isRequired,
+};
+
+Cart.defaultProps = {
+  cart: [],
+  total: '',
+};
 
 const mapStateToProps = state => ({
   cart: state.cart.map(product => ({
