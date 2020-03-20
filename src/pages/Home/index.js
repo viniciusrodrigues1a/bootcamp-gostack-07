@@ -1,6 +1,8 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import PropTypes from 'prop-types';
+
 import { MdAddShoppingCart } from 'react-icons/md';
 import formatPrice from '../../utils/format';
 import api from '../../services/api';
@@ -50,6 +52,15 @@ function Home({ addToCartRequest, amountInCart }) {
     </ProductList>
   );
 }
+
+Home.propTypes = {
+  addToCartRequest: PropTypes.func.isRequired,
+  amountInCart: PropTypes.number,
+};
+
+Home.defaultProps = {
+  amountInCart: 0,
+};
 
 const mapStateToProps = state => ({
   amountInCart: state.cart.reduce((amountInCart, product) => {
